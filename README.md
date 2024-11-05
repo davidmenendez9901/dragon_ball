@@ -1,16 +1,70 @@
-# dragon_ball
+# Dragon Ball Flutter App
 
-A new Flutter project.
+¡Bienvenido a la app Dragon Ball Flutter! Esta aplicación permite a los usuarios explorar información sobre los personajes, episodios y otros elementos del universo Dragon Ball utilizando la [API de Dragon Ball](https://web.dragonball-api.com/).
 
-## Getting Started
+## Características
 
-This project is a starting point for a Flutter application.
+- Consulta detalles de personajes, episodios y más de Dragon Ball.
+- Interfaz de usuario amigable y responsiva, diseñada con Flutter.
+- Actualizaciones en tiempo real de la información obtenida de la API.
 
-A few resources to get you started if this is your first Flutter project:
+## Tecnologías utilizadas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter](https://flutter.dev/): Un marco de trabajo para la creación de aplicaciones nativas multiplataforma.
+- [Dart](https://dart.dev/): Lenguaje de programación utilizado por Flutter.
+- [API de Dragon Ball](https://web.dragonball-api.com/): Proporciona acceso a datos sobre el universo de Dragon Ball.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Instalación
+
+Para ejecutar esta aplicación en tu máquina local, sigue estos pasos:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/davidmenendez9901/dragon_ball.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd dragon_ball
+   ```
+3. Instala las dependencias:
+   ```bash
+   flutter pub get
+   ```
+4. Ejecuta la aplicación:
+   ```bash
+   flutter run
+   ```
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tus cambios:
+   ```bash
+   git checkout -b feature/nueva-caracteristica
+   ```
+3. Realiza tus cambios y haz commit:
+   ```bash
+   git commit -m "Añadida nueva característica"
+   ```
+4. Envía tus cambios al repositorio original:
+   ```bash
+   git push origin feature/nueva-caracteristica
+   ```
+5. Crea un pull request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
+
+## Contacto
+
+Para cualquier consulta o comentario, puedes contactar al autor:
+
+- **Nombre:** David Menendez
+- **Email:** [davidmenendez9901@gmail.com](mailto:davidmenendez9901@gmail.com)
+
+---
+
+¡Gracias por visitar el repositorio de la app Dragon Ball Flutter!
