@@ -7,7 +7,9 @@ class CharacterCardWidget extends StatelessWidget {
     super.key,
     required this.character,
   });
+
   final Character character;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -20,30 +22,39 @@ class CharacterCardWidget extends StatelessWidget {
         );
       },
       child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(8),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(4.0),
+                topRight: Radius.circular(4.0),
+              ),
+              child: SizedBox(
                 height: 125,
+                width: double.infinity,
                 child: Image.network(
                   character.image.toString(),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8),
-                child: Text(
-                  character.name.toString(),
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25,
-                  ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: Text(
+                character.name.toString(),
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

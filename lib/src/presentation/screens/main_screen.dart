@@ -10,6 +10,14 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          ),
+        ],
+      ),
       body: FutureBuilder(
         future: ApiHelper().getCharactersList(),
         builder: (context, AsyncSnapshot<List<Character>> snapshot) {
@@ -29,7 +37,6 @@ class MainScreen extends StatelessWidget {
                             width: double.infinity,
                           ),
                         ),
-                        // Eliminamos Expanded dentro de Stack
                         Container(
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
@@ -61,16 +68,17 @@ class MainScreen extends StatelessWidget {
                 // SliverGrid para el grid de personajes
                 SliverPadding(
                   padding:
-                  const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   sliver: SliverGrid(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, // Número de columnas
                       crossAxisSpacing: 10.0, // Espaciado entre columnas
                       mainAxisSpacing: 10.0, // Espaciado entre filas
                       childAspectRatio: 1.0, // Relación de aspecto
                     ),
                     delegate: SliverChildBuilderDelegate(
-                          (context, index) {
+                      (context, index) {
                         return CharacterCardWidget(
                           character: snapshot.data![index],
                         );
